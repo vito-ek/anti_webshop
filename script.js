@@ -1,15 +1,21 @@
-const endpoint = "https://dummyjson.com/products";
+const endpoint1 = "https://dummyjson.com/products/category/beauty";
+const endpoint2 = "https://dummyjson.com/products/category/fragrances";
 
-fetch(endpoint)
-  .then((response) => response.json())
-  .then((data) => {
-    data.products.forEach((product) => {
-      document.querySelector("#produktliste").innerHTML += `
+function hent(endpoint) {
+  fetch(endpoint)
+    .then((response) => response.json())
+    .then((data) => {
+      data.products.forEach((product) => {
+        document.querySelector("#produktliste").innerHTML += `
         <article>
           <img src="${product.thumbnail}" alt="${product.title}">
           <h2>${product.title}</h2>
           <p>${product.price} $</p>
         </article>
       `;
+      });
     });
-  });
+}
+
+hent(endpoint1);
+hent(endpoint2);
