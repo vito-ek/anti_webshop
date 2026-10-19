@@ -3,20 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produkter</title>
+    <title>aware – Produkter</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
-    <h1>Produkter</h1>
+    <header>
+      <h1>aware</h1>
+      <nav class="menu">
+        <a href="index.html">Forside</a>
+        <a href="about.html">Om os</a>
+        <a href="terms.html">Rettigheder</a>
+      </nav>
+    </header>
 
-    <main id="produktliste">
-      <img src="img/hero.webp" alt="hero" class="hero" />
+    <main>
+      <img src="img/hero.webp" alt="Beauty-produkter" class="hero" />
 
-      <script src="index.js"></script>
+      <h1>Produkter</h1>
+
+      <nav id="filter">
+        <button>All</button>
+        <button>Beauty</button>
+        <button>Fragrances</button>
+        <span id="visantal">antal</span> fundet
+      </nav>
+
+      <nav id="sortering">
+        <button>Rating high-low</button>
+        <button>Rating low-high</button>
+      </nav>
+
+      <section id="produktliste" class="produktliste"></section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
