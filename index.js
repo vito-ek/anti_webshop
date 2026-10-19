@@ -12,13 +12,15 @@ function visData(data) {
 
   data.forEach((element) => {
     markup += `
-      <article class="card">
-        <img src="${element.thumbnail}" alt="${element.title}">
-        <h2>${element.title}</h2>
-        
-        <p>Rating: ${element.rating}</p>
-      </article>
-    `;
+  <a class="link" href="productdetails.html?id=${element.id}">
+    <article class="card">
+      <img src="${element.thumbnail}" alt="${element.title}">
+      <h2>${element.title}</h2>
+      <p>${element.price} $</p>
+      <p>Rating: ${element.rating}</p>
+    </article>
+  </a>
+`;
   });
 
   produktliste.innerHTML = markup;
