@@ -10,7 +10,8 @@ function hent(endpoint) {
         <article>
           <img src="${product.thumbnail}" alt="${product.title}">
           <h2>${product.title}</h2>
-          <p>${product.price} $</p>
+          <p>Price ${product.price}</p>
+          <p>Rating: ${product.rating}</p>
         </article>
       `;
       });
