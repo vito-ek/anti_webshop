@@ -16,8 +16,8 @@ function visData(data) {
     <article class="card">
       <img src="${element.thumbnail}" alt="${element.title}">
       <h2>${element.title}</h2>
-      <p>${element.price} $</p>
-      <p>Rating: ${element.rating}</p>
+      <h3>Brand: ${element.brand}</h3>
+      <p>Rating: ${element.rating} stars</p>
     </article>
   </a>
 `;
