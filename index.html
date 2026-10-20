@@ -4,26 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>aware – Produkter</title>
-    <link rel="stylesheet" href="style.css" />
+
     <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
-    <header>
-      <h1>aware</h1>
-      <nav class="menu">
-        <a href="index.html">Forside</a>
-        <a href="about.html">Om os</a>
-        <a href="terms.html">Rettigheder</a>
-      </nav>
-    </header>
+    <section class="hero">
+      <picture class="hero-billede">
+        <!-- Billede til mobil -->
+        <source srcset="img/hero_mobil.webp" media="(max-width: 600px)" />
 
+        <!-- Billede til desktop -->
+        <img src="img/hero.webp" alt="Hero billede" />
+      </picture>
+
+      <header>
+        <h1>aware</h1>
+        <button class="burger">☰</button>
+
+        <nav class="menu">
+          <a href="index.html">Home</a>
+          <a href="index.html">Products</a>
+          <a href="review.html">Review product</a>
+          <a href="about.html">About</a>
+        </nav>
+      </header>
+    </section>
     <main>
-      <img src="img/hero.webp" alt="Beauty-produkter" class="hero" />
-
       <h1>Produkter</h1>
 
-      <p>Filter by category</p>
+      <p class="filter">Filter by category</p>
 
       <nav id="filter">
         <button>All</button>
@@ -32,7 +42,7 @@
         <span id="visantal">antal</span> fundet
       </nav>
 
-      <p>Sort by</p>
+      <p class="filter">Sort by</p>
 
       <nav id="sortering">
         <button>Rating high-low</button>

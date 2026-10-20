@@ -1,13 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero fylder hele skærmen */
 .hero {
-  display: block;
+  position: relative;
   width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Billedet ligger bag indholdet */
+.hero-billede {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-billede img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Header og indhold ligger oven på billedet */
+.hero header,
+.hero-indhold {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header hen over billedet */
+.hero header {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding: 1.5rem 2rem;
+}
+
+/* Overskriften */
+.hero-indhold {
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.burger {
+  display: block;
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+  background: white;
+  z-index: 10;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
 }
 
 #filter {
   display: flex;
   gap: 10px;
   align-items: center;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
 }
 
 #filter button {
@@ -21,6 +113,12 @@
 #filter button:hover {
   background-color: #63504e;
   color: white;
+}
+#sortering {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
 #sortering button {
@@ -39,4 +137,25 @@
 #produktliste {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+#produktliste a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 1024px) {
+  #produktliste {
+    grid-template-columns: repeat(4, 315px);
+    justify-content: center;
+  }
+
+  #filter,
+  #sortering {
+    padding-left: 2rem;
+  }
+
+  .filter {
+    padding-left: 2rem;
+  }
 }
