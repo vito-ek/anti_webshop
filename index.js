@@ -17,7 +17,7 @@ function visData(data) {
       <img src="${element.thumbnail}" alt="${element.title}">
       <h2>${element.title}</h2>
       <h3>Brand: ${element.brand}</h3>
-      <p>Rating: ${element.rating} stars</p>
+      <p>Rating: ${element.rating} ★</p>
     </article>
   </a>
 `;
@@ -73,5 +73,14 @@ const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 
 burger.addEventListener("click", () => {
-  menu.classList.toggle("active");
+  const erAaben = menu.classList.toggle("active");
+
+  burger.textContent = erAaben ? "×" : "☰";
+});
+
+menu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+    burger.textContent = "☰";
+  });
 });
