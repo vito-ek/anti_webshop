@@ -1,0 +1,173 @@
+.logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: #6b5a53;
+}
+
+.burger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1003;
+
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6b5a53;
+  padding: 0;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  padding: 80px 25px 25px;
+  background: rgba(207, 217, 191, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 1001;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: #63504e;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 8vw, 2.5rem);
+  font-weight: 300;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.about {
+  position: relative;
+  margin: 2rem 1rem;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.about img {
+  display: block;
+  width: 100%;
+  height: 850px;
+  object-fit: cover;
+}
+
+.about_indhold {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  width: 90%;
+  max-width: 600px;
+  max-height: calc(100% - 2rem);
+  overflow-y: auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  text-align: center;
+  background-color: rgba(246, 246, 246, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+.about_indhold h2 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-weight: 300;
+  margin: 0 0 2rem;
+}
+
+.about_indhold h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+}
+
+.about_indhold p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 0 2.5rem;
+}
+
+.about_indhold p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+  .about {
+    margin: 5rem 17rem;
+    border-radius: 30px;
+  }
+
+  .about img {
+    height: 850px;
+  }
+
+  .about_indhold {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
+    max-width: 750px;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .about_indhold h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+  }
+
+  .about_indhold h3 {
+    font-size: 1.15rem;
+  }
+
+  .about_indhold p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}

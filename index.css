@@ -110,7 +110,11 @@ header h1 {
 }
 
 .burger {
-  display: block;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1003;
+
   margin-left: auto;
   background: none;
   border: none;
@@ -118,17 +122,14 @@ header h1 {
   cursor: pointer;
   color: #6b5a53;
   padding: 0;
-  position: relative;
-  z-index: 1002;
 }
 
 .menu {
   display: none;
   position: fixed;
-  top: 0;
-  right: 0;
-  left: auto;
+  inset: 0 0 0 auto;
   width: 100%;
+  height: 100vh;
   height: 100dvh;
   box-sizing: border-box;
 
@@ -138,10 +139,9 @@ header h1 {
   gap: 25px;
 
   padding: 80px 25px 25px;
-  background: rgba(207, 217, 191, 0.85);
+  background: rgba(207, 217, 191, 0.75);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-
   z-index: 1001;
 }
 
@@ -152,7 +152,7 @@ header h1 {
 .menu a {
   text-decoration: none;
   color: #63504e;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: clamp(2rem, 8vw, 2.5rem);
   font-weight: 300;
 }
@@ -332,20 +332,6 @@ header h1 {
   padding-bottom: 2rem;
 }
 
-/* .card-product {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
-  background-color: #f6f6f6;
-  padding: 1rem;
-  border-radius: 5px;
-  color: black;
-}
-.product-info {
-  display: flex;
-  flex-direction: column;
-} */
-
 @media (min-width: 1200px) {
   main {
     padding: 0 110px;
@@ -355,7 +341,7 @@ header h1 {
     justify-content: center;
   }
 
-  .menu {
+  /*   .menu {
     display: none;
     position: fixed;
     top: 0;
@@ -386,7 +372,7 @@ header h1 {
 
   .menu a {
     font-size: clamp(2rem, 3vw, 2.5rem);
-  }
+  } */
 
   .about {
     position: relative;
