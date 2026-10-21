@@ -20,11 +20,11 @@ body {
 /* HERO – mobil som standard */
 .hero {
   position: relative;
-  width: 100%;
-  height: 100svh;
+  width: auto;
+  height: 90svh;
   min-height: 500px;
+  margin: 3rem 1rem 1rem;
   overflow: visible;
-  margin: 0;
 }
 
 /* Billedet bag indholdet */
@@ -33,6 +33,7 @@ body {
   inset: 0;
   z-index: 0;
   overflow: hidden;
+  border-radius: 25px;
 }
 
 .hero-billede img {
@@ -158,10 +159,9 @@ header h1 {
 
 .about {
   position: relative;
-  margin: 0;
-  /*   padding: 0; */
-  /*   padding-top: 3rem;
- */
+  margin: 2rem 1rem;
+  overflow: hidden;
+  border-radius: 25px;
 }
 
 .about img {
@@ -221,7 +221,8 @@ header h1 {
   background-color: #f6f6f6;
   padding: 15px;
   border-radius: 15px;
-  margin-bottom: 0;
+  margin: 3rem 1rem 0;
+  box-sizing: border-box;
 }
 
 .filter_boks .filter {
@@ -389,12 +390,10 @@ header h1 {
 
   .about {
     position: relative;
-    width: 100%;
-    margin: 0;
-    /*     padding: 0;
-
- */
-    /*  padding-top: 1rem; */
+    width: auto;
+    margin: 3rem 2rem;
+    border-radius: 30px;
+    overflow: hidden;
   }
 
   .about img {
@@ -436,14 +435,23 @@ header h1 {
     padding: 1.5rem 2rem;
   }
 
+  .hero {
+    margin: 1.5rem 2rem;
+    height: 90svh;
+    min-height: 600px;
+  }
+
+  .hero-billede {
+    border-radius: 30px;
+  }
+
   .explore {
     padding: 20px 75px;
   }
 
   .filter_boks {
-    margin-left: -110px;
-    margin-right: -110px;
-    border-radius: 0;
+    margin: 3rem 2rem 0;
+    border-radius: 30px;
   }
 }
 
