@@ -4,32 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productdetails</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="productdetails.css" />
   </head>
   <body>
     <header>
-      <button class="icon-btn" aria-label="Søg"></button>
-      <h1>AWARE</h1>
-      <button class="icon-btn" aria-label="Menu"></button>
+      <a href="index.html" class="logo">
+        <h1>AWARE</h1>
+      </a>
+      <button class="burger">☰</button>
     </header>
 
-    <button id="backbutton"><- back</button>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="#explore">Products</a>
+      <a href="review.html">Review product</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <button id="backbutton">&larr; back</button>
 
     <main id="product"></main>
 
-    <footer>
-      <div>
+    <footer class="footer_grid">
+      <div class="footer_div">
         <h4>Share your beauty favorites</h4>
         <p>Help others find products that actually work, before they buy</p>
-        <a href="index.html" class="rate-btn">Rate &rarr;</a>
+        <a href="index.html" class="footer_button"><span>Rate</span></a>
       </div>
-      <div>
+      <div class="footer_div">
         <h4>Explore</h4>
-        <p>Reviews &amp; Products</p>
+        <a href="review.html">Review Products</a>
       </div>
-      <div>
+      <div class="footer_div">
         <h4>About us</h4>
-        <p>About the platform</p>
+        <a href="about.html">About the platform</a>
       </div>
       <div>
         <h4>Contact us:</h4>

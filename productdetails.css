@@ -1,4 +1,77 @@
-#button {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: #6b5a53;
+}
+
+.burger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1003;
+
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6b5a53;
+  padding: 0;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  padding: 80px 25px 25px;
+  background: rgba(207, 217, 191, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 1001;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: #63504e;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 8vw, 2.5rem);
+  font-weight: 300;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+#backbutton {
   padding: 10px 20px;
   border: 1px solid #63504e;
   background-color: white;
@@ -6,7 +79,300 @@
   border-radius: 17px;
   cursor: pointer;
 }
+#backbutton:hover {
+  background-color: #63504e;
+  color: white;
+}
+
 button:hover {
   background-color: #63504e;
   color: white;
+}
+
+.rate-btn {
+  padding: 10px 20px;
+  border: 1px solid #63504e;
+  background-color: white;
+  color: black;
+  border-radius: 17px;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --tekst: #6b5a53;
+  --oliven: #5c4d1f;
+  --graa: #f4f4f4;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  max-width: 480px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: var(--tekst);
+}
+
+/* TIlbage knappen */
+#backbutton {
+  margin: 1.5rem 0 0 0.5rem;
+  padding: 0.3rem 1.3rem;
+  border: 1px solid var(--tekst);
+  border-radius: 999px;
+  background: white;
+  color: #000;
+  font: inherit;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* Produkt */
+.produktbillede {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 1.5rem;
+}
+
+#product h2 {
+  margin: 0 0 1.5rem;
+  padding-inline: 1rem;
+  line-height: 1.8;
+}
+
+.beskrivelse {
+  margin: 0 0 1.5rem;
+  padding-inline: 1rem;
+  line-height: 1.8;
+}
+
+.review-btn {
+  display: block;
+  width: 75%;
+  margin: 0 auto 2rem;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid #000;
+  border-radius: 999px;
+  background-color: var(--graa);
+  color: #000;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* Anmeldelser */
+.reviews-box {
+  background-color: var(--graa);
+  border-radius: 35px;
+  padding: 1.5rem 1rem;
+}
+
+.reviews-titel {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--oliven);
+}
+
+.stars {
+  font-size: 2rem;
+  line-height: 1.2;
+  padding: 1.2rem 0.3rem 0;
+  border-top: 2px solid #000;
+}
+
+.review-top {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.review-top strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.review-top span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.review-top p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #000;
+  font-weight: 400;
+}
+
+.footer_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+}
+.footer_div {
+  border-right: 1px solid black;
+}
+
+footer a {
+  text-decoration: none;
+  color: grey;
+  font-family: "Inter";
+  font-style: italic;
+  padding-top: 1rem;
+}
+
+.footer_button {
+  padding: 10px 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-style: normal;
+  color: black;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0.5px solid black;
+}
+
+.footer_button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  body {
+    max-width: none;
+    padding: 0;
+  }
+
+  #backbutton {
+    display: block;
+    margin: 2rem 0 0 max(2.5rem, calc((100% - 1300px) / 2));
+  }
+
+  /* Grå boks */
+  #product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titel titel"
+      "info info"
+      "knap knap"
+      "anm bil";
+    column-gap: 4rem;
+    row-gap: 0.5rem;
+    align-items: stretch;
+    max-width: 1300px;
+    margin: 1.5rem auto 6rem;
+    padding: 3rem 2.5rem;
+    background-color: #d9d9d9;
+    border-radius: 12px;
+  }
+
+  #product h2 {
+    grid-area: titel;
+    margin: 0;
+    padding-inline: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  .beskrivelse {
+    grid-area: info;
+    margin: 0 0 1.5rem;
+    padding-inline: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .review-btn {
+    grid-area: knap;
+    display: block;
+    width: fit-content;
+    margin: 0 0 2rem 1.5rem;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+  }
+
+  .reviews-box {
+    grid-area: anm;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-height: 600px;
+  }
+
+  .reviews-titel {
+    font-size: 0.9rem;
+    color: #000;
+  }
+
+  .reviews-inner > .stars {
+    padding: 0.3rem 0 1.5rem;
+    border-top: none;
+    font-size: 1.8rem;
+  }
+
+  /* Hver anmeldelse: navn/dato til venstre, stjerner + kommentar til højre  */
+  .review {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    padding: 1.8rem 0;
+  }
+
+  .review + .review {
+    border-top: 1px solid #000;
+  }
+
+  .review-top {
+    display: contents;
+  }
+
+  .review-top > div {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .review .stars {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0;
+    border-top: none;
+    font-size: 1.6rem;
+  }
+
+  .review-top p {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.9rem;
+  }
+
+  .review-top strong,
+  .review-top span {
+    font-size: 0.9rem;
+  }
+
+  /* Billede (højre) */
+  .produktbillede {
+    grid-area: bil;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 12px;
+  }
 }

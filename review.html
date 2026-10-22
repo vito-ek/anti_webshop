@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="review.css" />
+    <title>Review the product</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">
+        <h1>AWARE</h1>
+      </a>
+      <button class="burger">☰</button>
+    </header>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="#explore">Products</a>
+      <a href="review.html">Review product</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <main>
+      <form id="form">
+        <h2>Review the product</h2>
+
+        <label>Name *</label>
+        <input type="text" id="name" required />
+
+        <label>Email adress *</label>
+        <input type="email" id="email" required />
+
+        <label>Phone number *</label>
+        <input type="tel" id="phone" required minlength="8" />
+
+        <label>Product *</label>
+        <select id="product" required></select>
+
+        <label>Stars *</label>
+        <div id="stars"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>
+
+        <label>Your review *</label>
+        <textarea id="review" rows="5" required></textarea>
+
+        <button class="submit" type="submit">Send review</button>
+      </form>
+
+      <section id="tak" hidden>
+        <div class="check">✓</div>
+        <h2>Thanks for your review</h2>
+        <p>Your experience helps others find products that actually work, before they buy.</p>
+
+        <div class="knapper">
+          <a href="index.html" class="knap primaer">Back to products</a>
+          <a href="review.html" class="knap">Review another</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer_grid">
+      <div class="footer_div">
+        <h4>Share your beauty favorites</h4>
+        <p>Help others find products that actually work, before they buy</p>
+        <a href="index.html" class="footer_button"><span>Rate</span></a>
+      </div>
+      <div class="footer_div">
+        <h4>Explore</h4>
+        <a href="review.html">Review Products</a>
+      </div>
+      <div class="footer_div">
+        <h4>About us</h4>
+        <a href="about.html">About the platform</a>
+      </div>
+      <div>
+        <h4>Contact us:</h4>
+        <p></p>
+      </div>
+    </footer>
+
+    <script src="review.js"></script>
+  </body>
+</html>
