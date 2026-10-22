@@ -2,6 +2,79 @@
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: #6b5a53;
+}
+
+.burger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1003;
+
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6b5a53;
+  padding: 0;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  padding: 80px 25px 25px;
+  background: rgba(207, 217, 191, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 1001;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: #63504e;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 8vw, 2.5rem);
+  font-weight: 300;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
 body {
   max-width: 480px;
   margin: 0 auto;
@@ -56,7 +129,7 @@ textarea {
   color: #000;
 }
 
-button {
+button .submit {
   margin-top: 1.5rem;
   padding: 0.8rem 2rem;
   border: 1px solid #6b5a53;
@@ -67,7 +140,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.submit:hover {
   background: #6b5a53;
   color: white;
 }
@@ -136,6 +209,42 @@ button:hover {
 
 #tak .knap.primaer {
   background: #6b5a53;
+  color: white;
+}
+
+.footer_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+}
+.footer_div {
+  border-right: 1px solid black;
+}
+
+footer a {
+  text-decoration: none;
+  color: grey;
+  font-family: "Inter";
+  font-style: italic;
+  padding-top: 1rem;
+}
+
+.footer_button {
+  padding: 10px 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-style: normal;
+  color: black;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0.5px solid black;
+}
+
+.footer_button:hover {
+  background-color: black;
   color: white;
 }
 

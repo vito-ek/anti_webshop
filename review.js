@@ -4,7 +4,7 @@ const starsBox = document.querySelector("#stars");
 const id = new URLSearchParams(window.location.search).get("id");
 let rating = 0;
 
-/* ---------- Produkter ---------- */
+/* Produkter */
 const urls = ["https://dummyjson.com/products/category/beauty", "https://dummyjson.com/products/category/fragrances"];
 
 Promise.all(urls.map((url) => fetch(url).then((res) => res.json())))
@@ -20,7 +20,7 @@ Promise.all(urls.map((url) => fetch(url).then((res) => res.json())))
     select.innerHTML = `<option value="">Kunne ikke hente produkter</option>`;
   });
 
-/* ---------- Stjerner (bygges her, så de altid findes) ---------- */
+/* Stjerner */
 starsBox.innerHTML = [1, 2, 3, 4, 5].map((n) => `<span data-n="${n}">☆</span>`).join("");
 
 const stars = starsBox.querySelectorAll("span");
@@ -44,7 +44,7 @@ stars.forEach((s) => {
 
 starsBox.addEventListener("mouseleave", () => visStjerner(rating));
 
-/* ---------- Send ---------- */
+/* Send */
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -64,4 +64,20 @@ form.addEventListener("submit", (e) => {
 
   form.hidden = true;
   document.querySelector("#tak").hidden = false;
+});
+
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+
+burger.addEventListener("click", () => {
+  const erAaben = menu.classList.toggle("active");
+
+  burger.textContent = erAaben ? "×" : "☰";
+});
+
+menu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+    burger.textContent = "☰";
+  });
 });

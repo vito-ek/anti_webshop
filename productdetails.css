@@ -1,3 +1,76 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: #6b5a53;
+}
+
+.burger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1003;
+
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6b5a53;
+  padding: 0;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  padding: 80px 25px 25px;
+  background: rgba(207, 217, 191, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 1001;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: #63504e;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 8vw, 2.5rem);
+  font-weight: 300;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
 #backbutton {
   padding: 10px 20px;
   border: 1px solid #63504e;
@@ -140,52 +213,40 @@ body {
   font-weight: 400;
 }
 
-/* Footer */
-footer {
+.footer_grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
-  margin-top: 2rem;
-  padding: 1.2rem 0;
-  background: var(--graa);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
 }
-
-footer > div {
-  padding: 0 0.6rem;
-  border-right: 1.5px solid var(--tekst);
-}
-
-footer > div:last-child {
-  border-right: none;
-}
-
-footer h4 {
-  margin: 0 0 0.3rem;
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-
-footer p {
-  margin: 0 0 0.6rem;
-  font-size: 0.55rem;
-  font-style: italic;
-  line-height: 1.5;
+.footer_div {
+  border-right: 1px solid black;
 }
 
 footer a {
-  color: inherit;
+  text-decoration: none;
+  color: grey;
+  font-family: "Inter";
+  font-style: italic;
+  padding-top: 1rem;
 }
 
-.rate-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0.25rem 0.8rem;
-  border: 1px solid var(--tekst);
-  border-radius: 999px;
-  background-color: white;
-  font-size: 0.65rem;
+.footer_button {
+  padding: 10px 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-style: normal;
+  color: black;
+  border-radius: 25px;
+  cursor: pointer;
   text-decoration: none;
+  border: 0.5px solid black;
+}
+
+.footer_button:hover {
+  background-color: black;
+  color: white;
 }
 
 @media (min-width: 1200px) {
@@ -313,31 +374,5 @@ footer a {
     object-fit: contain;
     background-color: white;
     border-radius: 12px;
-  }
-
-  /* Footer */
-  footer {
-    margin-top: 0;
-    min-height: 15rem;
-    padding: 3rem 4rem;
-    background-color: #d9d9d9;
-  }
-
-  footer > div {
-    padding: 0 2rem;
-    border-right-color: #000;
-  }
-
-  footer h4 {
-    font-size: 1.6rem;
-  }
-
-  footer p {
-    font-size: 0.85rem;
-  }
-
-  .rate-btn {
-    width: 10rem;
-    font-size: 0.85rem;
   }
 }
