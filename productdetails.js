@@ -70,4 +70,9 @@ fetch(endpoint)
         </div>
       </section>
     `;
+
+    // NY: send brugeren videre til review-siden
+    document.querySelector(".review-btn").addEventListener("click", () => {
+      location.href = `review.html?id=${data.id}`;
+    });
   });
