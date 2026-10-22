@@ -129,7 +129,7 @@ textarea {
   color: #000;
 }
 
-button .submit {
+.submit {
   margin-top: 1.5rem;
   padding: 0.8rem 2rem;
   border: 1px solid #6b5a53;
